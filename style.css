@@ -11,10 +11,11 @@
     --color-blue-100: rgb(21, 23, 30);
 
     --color-green-400: rgb(91, 154, 162);
+    --color-yellow-400: rgb(196, 179, 110);
 
     --color-gray-400: rgb(168,168,168);
 
-    --color-background: #6e6f6a;
+    --color-background: #00000040;
     --color-surface: #6e6f6a;
 }
 
@@ -39,7 +40,8 @@ body {
     display: flex;
     flex-flow: column;
     gap: 20px;
-    padding: 50px 50px 0;
+    padding: 50px 50px 20px;
+    background: var(--color-background);
 }
 
 .app-bar__title {
@@ -78,6 +80,16 @@ body {
 
 .game-stats__fps {
     width: 100px;
+}
+
+.has-updates::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 15px;
+    height: 15px;
+    background: var(--color-yellow-400);
 }
 
 /** Блок btn */
