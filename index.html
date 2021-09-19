@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class='game'>
+        <nav class='app-bar'>
+            <div class='app-bar__title'>
+                <h3>Call of Duty</h3>
+                <h1>MODERN<br />WARFARE</h1>
+            </div>
+
+            <div class='app-bar__actions'>
+                <button class='btn btn_contained play'>Play</button>
+                <button class='btn btn_contained play'>Weapons</button>
+                <button class='btn btn_contained play'>Operators</button>
+                <button class='btn btn_contained play'>Battle Pass</button>
+                <button class='btn btn_contained play'>Challenges</button>
+                <button class='btn btn_contained play'>Barracks</button>
+                <button class='btn btn_contained play'>Store</button>
+            </div>
+        </nav>
+
+        <div class='game-stats'>
+            <div class='game-stats__item game-stats__fps'>
+                FPS: <span class='game-stats__value'></span>
+            </div>
+
+            <div class='game-stats__item game-stats__mute-sound'>
+                Mute Sound: <span class='game-stats__value'>Disabled</span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class='modal launcher'>
+        <button class="muted btn btn_launcher launcher__play">Play now</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

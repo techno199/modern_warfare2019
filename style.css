@@ -1,0 +1,130 @@
+:root {
+    --color-primary-main: #525250;
+    --color-primary-dark: #343433;
+
+    --color-secondary-light: #b2a29c;
+    --color-secondary-main: #b2a29c;
+    --color-secondary-dark: #b2a29c;
+    --color-on-secondary: #0e0e0e;
+
+    --color-blue-700: rgb(0, 116, 224);
+    --color-blue-100: rgb(21, 23, 30);
+
+    --color-green-400: rgb(91, 154, 162);
+
+    --color-gray-400: rgb(168,168,168);
+
+    --color-background: #6e6f6a;
+    --color-surface: #6e6f6a;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: fixed url('./img/bg_loading.jpg') no-repeat center;
+    background-size: cover;
+    font-family: Rubik;
+    color: var(--color-gray-400);
+}
+
+.launcher {
+    background-color: var(--color-blue-100);
+}
+
+.app-bar {
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+    padding: 30px 50px 0;
+}
+
+.app-bar__title {
+    max-width: max-content;
+    text-align: center;
+    color: var(--color-green-400);
+}
+
+.app-bar__actions {
+    display: flex;
+}
+
+.game-stats {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    margin: 0 20px;
+    gap: 5px;
+    width: 100%;
+    font-size: 14px;
+}
+
+.game-stats__item {
+    padding: 1px 6px;
+    background: rgba(0,0,0,.5);
+    font-weight: 500;
+}
+
+.game-stats__value {
+    color: var(--color-secondary-dark);
+    font-weight: normal;
+}
+
+.game-stats__fps {
+    width: 70px;
+}
+
+/** Блок btn */
+.btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 36px;
+    border: none;
+    color: var(--color-secondary-light);
+    background-color: transparent;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn_contained {
+    width: 124px;
+    height: 31px;
+    white-space: nowrap;
+}
+
+.btn_contained.selected, .btn_contained:hover {
+    background: url('/img/mw_btn.png');
+    background-size: contain;
+    color: var(--color-on-secondary);
+}
+
+.btn_launcher {
+    color: white;
+    background-color: var(--color-blue-700);
+    border-radius: 4px;
+}
+
+/** Блок modal */
+.modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/** Универсальный модификатор */
+.hidden {
+    display: none;
+}
