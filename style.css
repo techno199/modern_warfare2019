@@ -97,14 +97,38 @@ body {
     width: 100px;
 }
 
-.has-updates::after {
-    content: '';
+@keyframes update_icon_pulse {
+    from {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+    }
+    to {
+        width: calc(100% + 15px);
+        height: calc(100% + 15px);
+        opacity: 1;
+    }
+}
+
+.has-updates {
     position: absolute;
     top: 5px;
     right: 5px;
     width: 15px;
     height: 15px;
     background: var(--color-yellow-400);
+}
+
+.has-updates::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--color-yellow-400);
+    transform: translate(-50%, -50%);
+    animation: 2.2s cubic-bezier(1,.01,.68,.58) infinite update_icon_pulse;
 }
 
 /** Блок btn */
