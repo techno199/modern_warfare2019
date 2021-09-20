@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./stylesheets/shared.css">
+    <link rel="stylesheet" href="./stylesheets/launcher.css">
+    <link rel="stylesheet" href="./stylesheets/app-bar.css">
+    <link rel="stylesheet" href="./stylesheets/play.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -14,36 +17,6 @@
 
 <body>
     <div class='game'>
-        <nav class='app-bar'>
-            <div class='app-bar__title'>
-                <h3>Call of Duty</h3>
-                <h1>MODERN<br />WARFARE</h1>
-            </div>
-
-            <div class='app-bar__actions'>
-                <button class='btn btn_contained'>Play</button>
-                <button class='btn btn_contained'>Weapons</button>
-                <button class='btn btn_contained'>Operators</button>
-                <button class='btn btn_contained'>Battle Pass</button>
-                <button class='btn btn_contained'>Challenges</button>
-                <button class='btn btn_contained'>Barracks</button>
-                <button class='btn btn_contained'>
-                    <div class="has-updates"></div>
-                    Store
-                </button>
-                
-                <button class='btn btn_grid app-bar__social'>
-                    <img src="./img/social_1.png" class='app-bar__social-many' />
-
-                    <span>16 / 42</span>
-
-                    <img src="./img/social_2.png" class='app-bar__social-single' />
-                    
-                    <span>0</span>
-                </button>
-            </div>
-        </nav>
-
         <div class='game-stats'>
             <div class='game-stats__item game-stats__fps'>
                 FPS: <span class='game-stats__value'></span>
@@ -53,10 +26,82 @@
                 Mute Sound: <span class='game-stats__value'>Disabled</span>
             </div>
         </div>
+
+        <nav class='app-bar'>
+            <div class='app-bar__title'>
+                <h3>Call of Duty</h3>
+                <h1>MODERN<br />WARFARE</h1>
+            </div>
+
+            <div class='app-bar__actions'>
+                <button class='btn btn_contained default-button-audio selected'>Play</button>
+                <button class='btn btn_contained default-button-audio'>Weapons</button>
+                <button class='btn btn_contained default-button-audio'>Operators</button>
+                <button class='btn btn_contained default-button-audio'>
+                    <div class="new-content-mark"></div>
+                    Battle Pass
+                </button>
+                <button class='btn btn_contained default-button-audio'>Challenges</button>
+                <button class='btn btn_contained default-button-audio'>Barracks</button>
+                <button class='btn btn_contained default-button-audio'>
+                    <div class="new-content-mark"></div>
+                    Store
+                </button>
+
+                <button class='btn btn_grid btn_grid-highlight default-button-audio app-bar__social'>
+                    <img src="./img/social_1.png" class='app-bar__social-many' />
+
+                    <span>16 / 42</span>
+
+                    <img src="./img/social_2.png" class='app-bar__social-single' />
+
+                    <span>0</span>
+                </button>
+            </div>
+        </nav>
+
+        <section class="section-play">
+            <div>
+                <div class="section-play__quickplay-wrap">
+                    <button class="btn btn_grid default-button-audio section-play__quickplay">
+                        Quick Play
+                    </button>
+
+                    <button class="btn btn_dark section-play__filters default-button-hover-audio filter-button-click-audio">
+                        <span>Filter</span>
+                        <img src="./img/filters.png" />
+                    </button>
+                </div>
+            </div>
+
+            <button class="btn btn_grid btn_grid-highlight-inset default-button-audio">
+                Ground War
+            </button>
+
+            <button class="btn btn_grid btn_grid-highlight-inset default-button-audio">
+                Gunfight
+            </button>
+
+            <button class="btn btn_grid btn_grid-highlight-inset default-button-audio">
+                Cyber Attack PRO
+            </button>
+
+            <button class="btn btn_grid btn_grid-highlight-inset default-button-audio">
+                Gunfight - Knives Only
+            </button>
+
+            <button class="btn btn_grid btn_grid-highlight-inset default-button-audio">
+                Shipment Extended
+            </button>
+
+            <button class="btn btn_grid btn_grid-highlight-inset default-button-audio">
+                Shoothouse 24/7
+            </button>
+        </section>
     </div>
 
     <div class='modal launcher'>
-        <button class="muted btn btn_launcher launcher__play">Play</button>
+        <button class="btn btn_launcher launcher__play">Play</button>
     </div>
     <script src="script.js"></script>
 </body>

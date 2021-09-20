@@ -1,0 +1,158 @@
+:root {
+    --color-primary-main: #525250;
+    --color-primary-dark: #343433;
+
+    --color-secondary-light: #b2a29c;
+    --color-secondary-main: #b2a29c;
+    --color-secondary-dark: #b2a29c;
+    --color-on-secondary: #0e0e0e;
+
+    --color-blue-200: #48ffff;
+    --color-blue-700: rgb(0, 116, 224);
+    --color-blue-100: rgb(21, 23, 30);
+
+    --color-green-400: rgb(91, 154, 162);
+    --color-yellow-400: rgb(196, 179, 110);
+
+    --color-gray-400: rgb(168,168,168);
+
+    --color-background: #00000040;
+    --color-surface: #6e6f6a;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: fixed url('/img/bg_loading.jpg') no-repeat center;
+    background-size: cover;
+    color: var(--color-gray-400);
+    font-family: Rubik;
+    user-select: none;
+}
+
+section {
+    margin: 100px 80px;
+}
+
+/** Блок btn */
+.btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 36px;
+    border: none;
+    color: var(--color-secondary-light);
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    isolation: isolate;
+}
+
+.btn_contained {
+    width: 170px;
+    height: 42px;
+    white-space: nowrap;
+}
+
+.btn_contained.selected, .btn_contained:hover {
+    background: url('/img/mw_btn.png');
+    background-size: contain;
+    color: var(--color-on-secondary);
+}
+
+.btn_launcher {
+    padding: 20px 70px;
+    color: white;
+    background-color: var(--color-blue-700);
+    border-radius: 4px;
+    font-size: 24px;;
+    text-transform: none;
+}
+
+.btn_grid::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('/img/bg_grid.png');
+    opacity: .4;
+    z-index: -1;
+}
+
+.btn_grid-highlight:hover::after {
+    box-shadow: 0px -2px 12px 2px #48ffff6b;
+}
+
+.btn_grid-highlight-inset:hover::after {
+    box-shadow: 
+        inset 0px 15px 8px -10px #48ffff6b,
+        inset 0px -15px 8px -10px #48ffff6b
+}
+
+.btn_dark {
+    background: #00000085;
+}
+
+.btn_dark:hover {
+    background:#000000b8;
+}
+
+/** Блок modal */
+.modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/** Универсальный модификатор */
+.hidden {
+    display: none;
+}
+
+@keyframes update_icon_pulse {
+    from {
+        
+        opacity: 1;
+    }
+    to {
+        width: calc(100% + 15px);
+        height: calc(100% + 15px);
+        opacity: 0;
+    }
+}
+
+.new-content-mark {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 15px;
+    height: 15px;
+    background: var(--color-yellow-400);
+}
+
+.new-content-mark::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    border: 2px solid var(--color-yellow-400);
+    transform: translate(-50%, -50%);
+    animation: 2.2s cubic-bezier(1,.01,.68,.58) infinite update_icon_pulse;
+}
