@@ -21,7 +21,7 @@
     height: 193px;
     width: 100%;
     padding: 30px;
-    background-image: url('/img/bg_quick_play.png');
+    background-image: url('../img/bg_quick_play.png');
     font-size: 32px;
     font-weight: 400;
 }
@@ -29,13 +29,13 @@
 .btn.section-play__quickplay::after {
     background-image: 
         linear-gradient(to bottom, #ffffffff 0%, #0d1415 40%, #000000 80%),
-        url('/img/bg_grid.png')
+        url('../img/bg_grid.png')
 }
 
 .btn.section-play__quickplay:hover::after {
     background-image: 
         linear-gradient(to bottom, #ffffffff 0%, #203539 40%, #017993 80%),
-        url('/img/bg_grid.png')
+        url('../img/bg_grid.png')
 }
 
 .section-play__quickplay-wrap {

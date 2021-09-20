@@ -27,7 +27,7 @@
 body {
     margin: 0;
     min-height: 100vh;
-    background: fixed url('/img/bg_loading.jpg') no-repeat center;
+    background: fixed url('../img/bg_loading.jpg') no-repeat center;
     background-size: cover;
     color: var(--color-gray-400);
     font-family: Rubik;
@@ -62,7 +62,7 @@ section {
 }
 
 .btn_contained.selected, .btn_contained:hover {
-    background: url('/img/mw_btn.png');
+    background: url('../img/mw_btn.png');
     background-size: contain;
     color: var(--color-on-secondary);
 }
@@ -83,7 +83,7 @@ section {
     right: 0;
     bottom: 0;
     left: 0;
-    background: url('/img/bg_grid.png');
+    background: url('../img/bg_grid.png');
     opacity: .4;
     z-index: -1;
 }
