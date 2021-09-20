@@ -7,6 +7,7 @@
     --color-secondary-dark: #b2a29c;
     --color-on-secondary: #0e0e0e;
 
+    --color-blue-200: #48ffff;
     --color-blue-700: rgb(0, 116, 224);
     --color-blue-100: rgb(21, 23, 30);
 
@@ -54,6 +55,20 @@ body {
 
 .app-bar__actions {
     display: flex;
+    align-items: center;
+}
+
+.btn.app-bar__social {
+    margin-left: auto;
+    padding: 5px 25px;
+}
+
+.app-bar__social-many {
+    margin-right: 1ch;
+}
+
+.app-bar__social-single {
+    margin: 0 1ch 0 4ch;
 }
 
 .game-stats {
@@ -127,6 +142,16 @@ body {
     border-radius: 4px;
     font-size: 24px;;
     text-transform: none;
+}
+
+.btn_grid {
+    border-top: 1px solid transparent;
+    background: url('./img/bg_grid.png');
+}
+
+.btn_grid:hover {
+    border-top: 1px solid var(--color-blue-200);
+    box-shadow: 0px -2px 12px 2px #48ffff6b;
 }
 
 /** Блок modal */
